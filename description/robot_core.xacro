@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="colours.xacro" />
+    
+    <!-- BASE LINK -->
+    <link name="base_link">
+        
+    </link>
+
+    <!-- CHASSIS -->
+    <joint name = "chassis_joint" type= "fixed"> 
+        <parent link = "base_link"/>
+        <child link = "chassis_link"/>
+        <origin xyz = "0 0 0"/>
+    </joint>
+
+    <link name = "chassis_link">
+        <visual>
+            <origin xyz = "0 0 0.15"/>
+            <geometry>
+                <box size = "1 0.7 0.3"/>
+            </geometry>
+            <material name ="red"/>
+        </visual>
+    </link>
+
+    <!-- LEFT FRONT WHEEL-->
+    <joint name = "lf_wheel_joint" type= "continuous">
+        <parent link = "chassis_link"/>
+        <child link = "lf_wheel_link"/>
+        <origin xyz = "0.3 0.35 0" rpy="-${pi/2} 0 0"/>
+        <axis xyz = "0 0 1"/>
+    </joint>
+
+    <link name = "lf_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder radius = "0.15" length="0.1"/>
+            </geometry>
+            <material name ="white"/>
+        </visual>
+    </link>
+
+    <!-- RIGHT FRONT WHEEL-->
+    <joint name = "rf_wheel_joint" type= "continuous">
+        <parent link = "chassis_link"/>
+        <child link = "rf_wheel_link"/>
+        <origin xyz = "0.3 -0.35 0" rpy="${pi/2} 0 0"/>
+        <axis xyz = "0 0 -1"/>
+    </joint>
+
+    <link name = "rf_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder radius = "0.15" length="0.1"/>
+            </geometry>
+            <material name ="white"/>
+        </visual>
+    </link>
+
+    <!-- LEFT BACK WHEEL-->
+    <joint name = "lb_wheel_joint" type= "continuous">
+        <parent link = "chassis_link"/>
+        <child link = "lb_wheel_link"/>
+        <origin xyz = "-0.3 0.35 0" rpy="-${pi/2} 0 0"/>
+        <axis xyz = "0 0 1"/>
+    </joint>
+
+    <link name = "lb_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder radius = "0.15" length="0.1"/>
+            </geometry>
+            <material name ="white"/>
+        </visual>
+    </link>
+
+    <!-- RIGHT BACK WHEEL-->
+    <joint name = "rb_wheel_joint" type= "continuous">
+        <parent link = "chassis_link"/>
+        <child link = "rb_wheel_link"/>
+        <origin xyz = "-0.3 -0.35 0" rpy="${pi/2} 0 0"/>
+        <axis xyz = "0 0 -1"/>
+    </joint>
+
+    <link name = "rb_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder radius = "0.15" length="0.1"/>
+            </geometry>
+            <material name ="white"/>
+        </visual>
+    </link>
+
+</robot>
