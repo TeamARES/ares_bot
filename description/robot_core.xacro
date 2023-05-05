@@ -43,7 +43,7 @@
     <joint name = "lf_wheel_joint" type= "continuous">
         <parent link = "chassis_link"/>
         <child link = "lf_wheel_link"/>
-        <origin xyz = "0.3 0.35 0" rpy="-${pi/2} 0 0"/>
+        <origin xyz = "0.3 0.4 0" rpy="-${pi/2} 0 0"/>
         <axis xyz = "0 0 1"/>
     </joint>
 
@@ -73,7 +73,7 @@
     <joint name = "rf_wheel_joint" type= "continuous">
         <parent link = "chassis_link"/>
         <child link = "rf_wheel_link"/>
-        <origin xyz = "0.3 -0.35 0" rpy="${pi/2} 0 0"/>
+        <origin xyz = "0.3 -0.4 0" rpy="${pi/2} 0 0"/>
         <axis xyz = "0 0 -1"/>
     </joint>
 
@@ -103,7 +103,7 @@
     <joint name = "lb_wheel_joint" type= "continuous">
         <parent link = "chassis_link"/>
         <child link = "lb_wheel_link"/>
-        <origin xyz = "-0.3 0.35 0" rpy="-${pi/2} 0 0"/>
+        <origin xyz = "-0.3 0.4 0" rpy="-${pi/2} 0 0"/>
         <axis xyz = "0 0 1"/>
     </joint>
 
@@ -133,7 +133,7 @@
     <joint name = "rb_wheel_joint" type= "continuous">
         <parent link = "chassis_link"/>
         <child link = "rb_wheel_link"/>
-        <origin xyz = "-0.3 -0.35 0" rpy="${pi/2} 0 0"/>
+        <origin xyz = "-0.3 -0.4 0" rpy="${pi/2} 0 0"/>
         <axis xyz = "0 0 -1"/>
     </joint>
 
