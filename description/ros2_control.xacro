@@ -50,7 +50,7 @@
 
     <gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-            <parameters>$(find ares_bot)/config/my_controllers.yaml</parameters>
+            <parameters>$(find ares_bot)/config/control.yaml</parameters>
         </plugin>
     </gazebo>
 
