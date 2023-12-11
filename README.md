@@ -11,7 +11,14 @@ colcon build --symlink-install
 
 # Launch
 
-```
-source install/setup.bash
-ros2 launch ares_bot launch_sim.launch.py
-```
+  1. Launching Robot Model with Robot State Publisher:
+  ```
+  source install/setup.bash
+  ros2 launch ares_bot launch_sim.launch.py
+  ```
+
+  2. Launching Robot Model with ROS2 Control:
+  ```
+  source install/setup.bash
+  ros2 launch ares_bot launch_sim.launch.py
+  ```
