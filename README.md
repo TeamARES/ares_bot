@@ -3,7 +3,7 @@
 ```
 mkdir -p ares_bot_ws/src
 cd ares_bot_ws/src
-git clone https://github.com/SaumyaRaj188/ares_bot.git
+git clone https://github.com/TeamARES/ares_bot.git
 cd ..
 colcon build --symlink-install
 ```
